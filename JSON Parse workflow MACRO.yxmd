@@ -1,0 +1,3393 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.3">
+  <Nodes>
+    <Node ToolID="80">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="474" y="378" width="648" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Get track year</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="128" g="64" b="0" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="2448" height="324" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Parse and format JSON files</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="255" g="128" b="64" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="414" y="894" width="804" height="288" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Get Artist Gender</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="0" g="128" b="255" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="78" y="558" width="1272" height="336" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Find State Artist Hails From</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="Lime" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlobInput.BlobInput">
+        <Position x="90" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FileName>C:\Users\carro\OneDrive\Desktop\Software Project\Python Code\JSON Pop Files\Lyrics_ZoeWees.json</FileName>
+          <ModifyMethod>Suffix</ModifyMethod>
+          <ModifyFilename_Field>FileName</ModifyFilename_Field>
+          <ModifyFilename_StopOnError value="True" />
+          <SplitBlobs value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Blob" size="2147483647" source="BlobInput: " type="Blob" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobInput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlobConvert.BlobConvert">
+        <Position x="210" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ToBlob value="False" />
+          <from_Field>Blob</from_Field>
+          <from_Mode>Text</from_Mode>
+          <from_textCodePage>28599</from_textCodePage>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Blob" size="1073741823" source="BlobConvert: Text - CodePage: 28599" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobConvert" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.JSONParse.JSONParse">
+        <Position x="330" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <JSON_Field>Blob</JSON_Field>
+          <IncludeInOutput value="False" />
+          <SingleField value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueInt" source="JSONParse: " type="Int64" />
+            <Field name="JSON_ValueFloat" source="JSONParse: " type="Double" />
+            <Field name="JSON_ValueBool" source="JSONParse: " type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJSONParse" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="426" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[JSON_Name] = "songs.0.lyrics" OR
+[JSON_Name] = "songs.1.lyrics" OR
+[JSON_Name] = "songs.2.lyrics" OR
+[JSON_Name] = "songs.3.lyrics" OR
+[JSON_Name] = "songs.4.lyrics" OR
+[JSON_Name] = "songs.5.lyrics" OR
+[JSON_Name] = "songs.6.lyrics" OR
+[JSON_Name] = "songs.7.lyrics" OR
+[JSON_Name] = "songs.8.lyrics" OR
+[JSON_Name] = "songs.9.lyrics" OR
+[JSON_Name] = "songs.10.lyrics" OR
+[JSON_Name] = "songs.11.lyrics" OR
+[JSON_Name] = "songs.12.lyrics" OR
+[JSON_Name] = "songs.13.lyrics" OR
+[JSON_Name] = "songs.14.lyrics" OR
+[JSON_Name] = "songs.15.lyrics" OR
+[JSON_Name] = "songs.17.lyrics" OR
+[JSON_Name] = "songs.18.lyrics" OR
+[JSON_Name] = "songs.19.lyrics" OR
+[JSON_Name] = "songs.20.lyrics" OR
+[JSON_Name] = "songs.21.lyrics" OR
+[JSON_Name] = "songs.22.lyrics" OR
+[JSON_Name] = "songs.23.lyrics" OR
+[JSON_Name] = "songs.24.lyrics" OR
+[JSON_Name] = "songs.25.lyrics" OR
+[JSON_Name] = "songs.26.lyrics" OR
+[JSON_Name] = "songs.27.lyrics" OR
+[JSON_Name] = "songs.28.lyrics" OR
+[JSON_Name] = "songs.29.lyrics" OR
+[JSON_Name] = "songs.30.lyrics" OR
+[JSON_Name] = "songs.31.lyrics" OR
+[JSON_Name] = "songs.32.lyrics" OR
+[JSON_Name] = "songs.33.lyrics" OR
+[JSON_Name] = "songs.34.lyrics" OR
+[JSON_Name] = "songs.35.lyrics" OR
+[JSON_Name] = "songs.36.lyrics" OR
+[JSON_Name] = "songs.37.lyrics" OR
+[JSON_Name] = "songs.38.lyrics" OR
+[JSON_Name] = "songs.39.lyrics" OR
+[JSON_Name] = "name" or
+[JSON_Name] = "description.plain"
+
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[JSON_Name] = "songs.0.lyrics" OR
+[JSON_Name] = "songs.1.lyrics" OR
+[JSON_Name] ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueInt" source="JSONParse: " type="Int64" />
+            <Field name="JSON_ValueFloat" source="JSONParse: " type="Double" />
+            <Field name="JSON_ValueBool" source="JSONParse: " type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueInt" source="JSONParse: " type="Int64" />
+            <Field name="JSON_ValueFloat" source="JSONParse: " type="Double" />
+            <Field name="JSON_ValueBool" source="JSONParse: " type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="510" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="JSON_ValueString" selected="True" size="1173741823" />
+            <SelectField field="JSON_ValueInt" selected="False" />
+            <SelectField field="JSON_ValueFloat" selected="False" />
+            <SelectField field="JSON_ValueBool" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSONParse: " type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings>
+        <Position x="942" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"JSON_Name","JSON_ValueString"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">True</Value>
+          <Value name="Check Box (77)">True</Value>
+          <Value name="Drop Down (81)">title</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output26">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1194" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="248" />
+          <Fields>
+            <Field name="Brand   " />
+            <Field name="   Actual Name   " />
+            <Field name="Type" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Gucci</c>
+              <c>Gucci</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Bentley</c>
+              <c>Bentley</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Xanny</c>
+              <c>Xanax</c>
+              <c>Pharmaceutical</c>
+            </r>
+            <r>
+              <c>Bentleys</c>
+              <c>Bentley</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Audemars</c>
+              <c>Audemar Piguet</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>AP</c>
+              <c>Audemar Piguet</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>Goyard</c>
+              <c>Maison Goyard</c>
+              <c>Bag Maker</c>
+            </r>
+            <r>
+              <c>Benz</c>
+              <c>Mercedes-Benz</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Patek</c>
+              <c>Patek Philippe</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>Pateks</c>
+              <c>Patek Philippe</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>Bugatti</c>
+              <c>Bugatti Veron</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Offwhite</c>
+              <c>Off-White</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Bape</c>
+              <c>A Bathing Ape</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>VLone</c>
+              <c>VLone</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Garçons</c>
+              <c>Comme Des Garçons</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Cartier</c>
+              <c>Cartier</c>
+              <c>Jewelery</c>
+            </r>
+            <r>
+              <c>Hermés</c>
+              <c>Hermés</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Givenchy</c>
+              <c>Givenchy</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Dior</c>
+              <c>Dior</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Balmains</c>
+              <c>Balmain</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Balmain</c>
+              <c>Balmain</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Audemar</c>
+              <c>Audemar Piguet</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>Xanax</c>
+              <c>Xanax</c>
+              <c>Pharmaceutical</c>
+            </r>
+            <r>
+              <c>Timberlands</c>
+              <c>Timberland</c>
+              <c>Shoe Maker</c>
+            </r>
+            <r>
+              <c>Timbs</c>
+              <c>Timberland</c>
+              <c>Shoe Maker</c>
+            </r>
+            <r>
+              <c>Timberland</c>
+              <c>Timberland</c>
+              <c>Shoe Maker</c>
+            </r>
+            <r>
+              <c>True Religion</c>
+              <c>True Religion</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Range</c>
+              <c>Range Rover</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Lamborghini</c>
+              <c>Lamborghini</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Porches</c>
+              <c>Porche</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Porche</c>
+              <c>Porche</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Forbes</c>
+              <c>Forbes</c>
+              <c>Magazine</c>
+            </r>
+            <r>
+              <c>Wraith</c>
+              <c>Rolls-Royce Holdings</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Royce</c>
+              <c>Rolls-Royce Holdings</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Audi</c>
+              <c>Audi</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Glock</c>
+              <c>Glock Ges.m.b.H.</c>
+              <c>Weapons Manufacturer</c>
+            </r>
+            <r>
+              <c>FN</c>
+              <c>F&amp;N</c>
+              <c>Weapons Manufacturer</c>
+            </r>
+            <r>
+              <c>Puma</c>
+              <c>Puma</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Supreme</c>
+              <c>Supreme</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>huvy</c>
+              <c>Louis Vuitton</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Balenciaga</c>
+              <c>Balenciaga</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Rolex</c>
+              <c>Rolex SA</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>Rollie</c>
+              <c>Rolex SA</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>Wock</c>
+              <c>Wockhardt Ltd.</c>
+              <c>Pharmaceutical</c>
+            </r>
+            <r>
+              <c>Wockhardt</c>
+              <c>Wockhardt Ltd.</c>
+              <c>Pharmaceutical</c>
+            </r>
+            <r>
+              <c>Aesop</c>
+              <c>Aesop</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Armani</c>
+              <c>Armani</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Barbera</c>
+              <c>Luciano Barbera</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Barbour</c>
+              <c>J. Barbour and Sons</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Bareezé</c>
+              <c>Bareezé</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Barneys</c>
+              <c>Barneys New York</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Blanc</c>
+              <c>Sant Blanc</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>Boglioli</c>
+              <c>Boglioli</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Breitling</c>
+              <c>Breitling SA</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>Burberry</c>
+              <c>Burberry</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Chanel</c>
+              <c>Chanel</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Chrome Hearts</c>
+              <c>Chrome Hearts</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Comme</c>
+              <c>Comme des Garçons</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Common Projects</c>
+              <c>Common Projects</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Fendi</c>
+              <c>Fendi</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Ferragamo</c>
+              <c>Salvatore Ferragamo S.p.A.</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Ferrier</c>
+              <c>Laurent Ferrier</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Finnigans</c>
+              <c>Finnigans</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Fiorucci</c>
+              <c>Fiorucci</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Gabbana</c>
+              <c>Dolce &amp; Gabbana</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Gaultier</c>
+              <c>Jean Paul Gaultier</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Tesla</c>
+              <c>Tesla, Inc.</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Hermès</c>
+              <c>Hermès</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Kenzo</c>
+              <c>Kenzo (brand)</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Loewe</c>
+              <c>Loewe (fashion brand)</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Loews</c>
+              <c>Loews Hotels</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Louboutin</c>
+              <c>Christian Louboutin</c>
+              <c>Shoe Maker</c>
+            </r>
+            <r>
+              <c>McQueen</c>
+              <c>Alexander McQueen (brand)</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Moët</c>
+              <c>Moët &amp; Chandon</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Mulberry</c>
+              <c>Mulberry (company)</c>
+              <c>Bag Maker</c>
+            </r>
+            <r>
+              <c>Porsche</c>
+              <c>Porsche Design</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Prada</c>
+              <c>Prada</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>RitzCarlton</c>
+              <c>The Ritz-Carlton Hotel Company</c>
+              <c>Hotel Chain</c>
+            </r>
+            <r>
+              <c>Seiko</c>
+              <c>Seiko</c>
+              <c>Watch Maker</c>
+            </r>
+            <r>
+              <c>Swarovski</c>
+              <c>Swarovski</c>
+              <c>Jewelery</c>
+            </r>
+            <r>
+              <c>Tiffany</c>
+              <c>Tiffany &amp; Co.</c>
+              <c>Jewelery</c>
+            </r>
+            <r>
+              <c>Veneta</c>
+              <c>Bottega Veneta</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Versace</c>
+              <c>Versace</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Vetements</c>
+              <c>Vetements</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Vuitton</c>
+              <c>Louis Vuitton</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Henny</c>
+              <c>Hennessy</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Pérignon</c>
+              <c>Dom Pérignon</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Hennessy</c>
+              <c>Hennessy</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Backwood</c>
+              <c>Backwoods Smokes</c>
+              <c>Cigar</c>
+            </r>
+            <r>
+              <c>Hellcat</c>
+              <c>Dodge Challenger SRT</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Gosha</c>
+              <c>Gosha Rubchinskiy</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Raf</c>
+              <c>Raf Simons</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Rick</c>
+              <c>Rick Owens</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Tom Ford</c>
+              <c>Tom Ford</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Nova</c>
+              <c>Fashion Nova</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Birkin</c>
+              <c>Hermès</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Ritz</c>
+              <c>The Ritz-Carlton Hotel Company</c>
+              <c>Hotel Chain</c>
+            </r>
+            <r>
+              <c>Maybach</c>
+              <c>Maybach</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Celine</c>
+              <c>Celine</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Cc</c>
+              <c>Chanel</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Ccs</c>
+              <c>Chanel</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Wrangler</c>
+              <c>Wrangler</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Jeep</c>
+              <c>Jeep</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Deere</c>
+              <c>John Deer</c>
+              <c>Farming Equipment</c>
+            </r>
+            <r>
+              <c>Chevrolet</c>
+              <c>General Motors</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Nobu</c>
+              <c>Nobu Restaurants</c>
+              <c>Restaurant</c>
+            </r>
+            <r>
+              <c>Benihana</c>
+              <c>Benihana Sushi</c>
+              <c>Restaurant</c>
+            </r>
+            <r>
+              <c>Ace of spades</c>
+              <c>Ace of Spades Champagne</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Carhartt</c>
+              <c>Carhartt</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Eliantte</c>
+              <c>Official Eliantte &amp; Co</c>
+              <c>Jewelery</c>
+            </r>
+            <r>
+              <c>Tiktok</c>
+              <c>TikTok</c>
+              <c>Social Network</c>
+            </r>
+            <r>
+              <c>Coke</c>
+              <c>Coca-Cola</c>
+              <c>Beverage</c>
+            </r>
+            <r>
+              <c>Audi</c>
+              <c>Audi</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Duracells</c>
+              <c>Duracell Inc.</c>
+              <c>Battery Producer</c>
+            </r>
+            <r>
+              <c>Duracell</c>
+              <c>Duracell</c>
+              <c>Battery Producer</c>
+            </r>
+            <r>
+              <c>Miller</c>
+              <c>Miller Genuine Draft</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Tecate</c>
+              <c>Tecate</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Bud</c>
+              <c>Budweiser</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Guinness</c>
+              <c>Guinness</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Coors</c>
+              <c>Coors Banquet</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Equis</c>
+              <c>Dos Equis</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Pbr</c>
+              <c>Pabst Blue Ribbon</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Pabst</c>
+              <c>Pabst Blue Ribbon</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Yuengling</c>
+              <c>Yuengling Lager</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Natty</c>
+              <c>Natural Ice</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Stella</c>
+              <c>Stella Artois</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Keystone</c>
+              <c>Keystone Light</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Busch</c>
+              <c>Busch</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Modelo</c>
+              <c>Modelo Especial</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Corona</c>
+              <c>Corona Extra</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Michelob</c>
+              <c>Michelob Ultra</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Marlboro</c>
+              <c>Marlboro</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Port</c>
+              <c>Newport</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Newport</c>
+              <c>Newport</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Winston</c>
+              <c>Winston</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>LM</c>
+              <c>L&amp;M</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Sampoerna</c>
+              <c>Sampoerna</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Flake</c>
+              <c>Gold Flake</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Camel</c>
+              <c>Camel</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Pall</c>
+              <c>Pall Mall</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Copenhagen</c>
+              <c>Copenhagen</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Dunhill</c>
+              <c>Dunhill</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Rothmans</c>
+              <c>Rothmans</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Lucky Strike</c>
+              <c>Lucky Strike</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Viceroy</c>
+              <c>Viceroy</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>JPS</c>
+              <c>John Player Special</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Slims</c>
+              <c>Virginia Slims</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Buchanan</c>
+              <c>Buchanann's Scotch Whisky</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Kessler</c>
+              <c>Kessler American Whiskey</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Woodford</c>
+              <c>Woodford Reserve Bourbon Whiskey</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Dewar</c>
+              <c>Dewar's Scotch Whisky</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Canadian</c>
+              <c>Canadian Club Whisky</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Southern Comfort</c>
+              <c>Southern Comfort American Whiskey</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Bulleit</c>
+              <c>Bulleit Bourbon Whiskey</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Wild Turkey</c>
+              <c>Wild Turkey Bourbon Whiskey</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Walker</c>
+              <c>Johnnie Walker Scotch Whisky</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Black Velvet</c>
+              <c>Black Velvet Canadian Whisky</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Seagrams</c>
+              <c>Seagram's 7 Crown American Whiskey</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Makers</c>
+              <c>Maker's Mark Bourbon Whisky</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Jameson</c>
+              <c>Jameson Irish Whiskey</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Jim Beam</c>
+              <c>Jim Beam Bourbon Whiskey</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Fireball</c>
+              <c>Fireball Cinnamon Whisky</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Crown Royal</c>
+              <c>Crown Royal Canadian Whisky</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Daniels</c>
+              <c>Jack Daniel's Tennessee Whiskey</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Chevy</c>
+              <c>Chevy</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Cadillac</c>
+              <c>Cadillac</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Buick</c>
+              <c>Buick</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>GMC</c>
+              <c>GMC</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Dodge</c>
+              <c>Dodge</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Chrysler</c>
+              <c>Chrysler</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>RAM</c>
+              <c>RAM</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Ford</c>
+              <c>Ford Motor Company</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Lincoln</c>
+              <c>Lincoln</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Moncler</c>
+              <c>Moncler</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>CDG</c>
+              <c>Comme des Garçons</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Ghini</c>
+              <c>Lamborghini</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Lambo</c>
+              <c>Lamborghini</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Tessie</c>
+              <c>Tesla Inc.</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Margiela</c>
+              <c>Maison Margiela</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Amiri</c>
+              <c>Amiri</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Facebook</c>
+              <c>Facebook</c>
+              <c>Social Network</c>
+            </r>
+            <r>
+              <c>Twitter</c>
+              <c>Twitter</c>
+              <c>Social Network</c>
+            </r>
+            <r>
+              <c>Instagram</c>
+              <c>Instagram</c>
+              <c>Social Network</c>
+            </r>
+            <r>
+              <c>Barbie</c>
+              <c>Barbie</c>
+              <c>Children's Toy</c>
+            </r>
+            <r>
+              <c>Photoshop</c>
+              <c>Photoshop</c>
+              <c>Software</c>
+            </r>
+            <r>
+              <c>711</c>
+              <c>7-Eleven</c>
+              <c>Convenience stores company</c>
+            </r>
+            <r>
+              <c>Iphone</c>
+              <c>Apple Inc.</c>
+              <c>Technology Company</c>
+            </r>
+            <r>
+              <c>Samsung</c>
+              <c>Samsung</c>
+              <c>Technology Company</c>
+            </r>
+            <r>
+              <c>Koolaid</c>
+              <c>Kool-Aid</c>
+              <c>Beverage</c>
+            </r>
+            <r>
+              <c>Nike</c>
+              <c>Nike Inc.</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Nikes</c>
+              <c>Nike Inc.</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Jordan</c>
+              <c>Air Jordan</c>
+              <c>Shoe Maker</c>
+            </r>
+            <r>
+              <c>Jordans</c>
+              <c>Air Jordan</c>
+              <c>Shoe Maker</c>
+            </r>
+            <r>
+              <c>Yeezy</c>
+              <c>Yeezy</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Jumpman</c>
+              <c>Air Jordan</c>
+              <c>Shoe Maker</c>
+            </r>
+            <r>
+              <c>BMW</c>
+              <c>Bayerische Motoren Werke AG</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Polaroid</c>
+              <c>Polaroid B.V.</c>
+              <c>Photography Company</c>
+            </r>
+            <r>
+              <c>Cristal</c>
+              <c>Cristal Champagne</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Adidas</c>
+              <c>Adidas</c>
+              <c><![CDATA[Clothing ]]></c>
+            </r>
+            <r>
+              <c>Kodak</c>
+              <c>Kodak</c>
+              <c>Photography Company</c>
+            </r>
+            <r>
+              <c>YSL</c>
+              <c>Yves Saint Laurent</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Laurent</c>
+              <c>Yves Saint Laurent</c>
+              <c>Clothing</c>
+            </r>
+            <r>
+              <c>Aventador</c>
+              <c>Lamborghini</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Newports</c>
+              <c>Newport</c>
+              <c>Tobacco</c>
+            </r>
+            <r>
+              <c>Fanta</c>
+              <c>Fanta</c>
+              <c>Drink</c>
+            </r>
+            <r>
+              <c>Sprite</c>
+              <c>Sprite</c>
+              <c>Drink</c>
+            </r>
+            <r>
+              <c>Faygo</c>
+              <c>Faygo</c>
+              <c>Drink</c>
+            </r>
+            <r>
+              <c>Dasani</c>
+              <c>Dasani</c>
+              <c>Drink</c>
+            </r>
+            <r>
+              <c>Aquafina</c>
+              <c>Aquafina</c>
+              <c>Drink</c>
+            </r>
+            <r>
+              <c>Pepsi</c>
+              <c>Pepsi</c>
+              <c>Drink</c>
+            </r>
+            <r>
+              <c>7up</c>
+              <c>7 Up</c>
+              <c>Drink</c>
+            </r>
+            <r>
+              <c>Gatorade</c>
+              <c>Gatorade</c>
+              <c>Drink</c>
+            </r>
+            <r>
+              <c>Powerade</c>
+              <c>Powerade</c>
+              <c>Drink</c>
+            </r>
+            <r>
+              <c>Netflix</c>
+              <c>Netflix</c>
+              <c>Streaming Service</c>
+            </r>
+            <r>
+              <c>Tidal</c>
+              <c>Tidal</c>
+              <c>Streaming Service</c>
+            </r>
+            <r>
+              <c>Chipotle</c>
+              <c>Chipotle</c>
+              <c>Restaurant</c>
+            </r>
+            <r>
+              <c>Colgate</c>
+              <c>Colgate</c>
+              <c>Personal Hygeine</c>
+            </r>
+            <r>
+              <c>Uber</c>
+              <c>Uber</c>
+              <c>Ride Sharing</c>
+            </r>
+            <r>
+              <c>FedEx</c>
+              <c>FedEx</c>
+              <c>Postage Service</c>
+            </r>
+            <r>
+              <c>American Express</c>
+              <c>American Express</c>
+              <c>Bank Card</c>
+            </r>
+            <r>
+              <c>Fargo</c>
+              <c>Fargo</c>
+              <c>Bank</c>
+            </r>
+            <r>
+              <c>Disney</c>
+              <c>Disney</c>
+              <c>Multiumedia Company</c>
+            </r>
+            <r>
+              <c>Visa</c>
+              <c>Visa</c>
+              <c>Bank Card</c>
+            </r>
+            <r>
+              <c>MasterCard</c>
+              <c>MasterCard</c>
+              <c>Bank Card</c>
+            </r>
+            <r>
+              <c>Amazon</c>
+              <c>Amazon</c>
+              <c>Website</c>
+            </r>
+            <r>
+              <c>Google</c>
+              <c>Google</c>
+              <c>Website</c>
+            </r>
+            <r>
+              <c>Tide</c>
+              <c>Tide</c>
+              <c>Cleaning Products</c>
+            </r>
+            <r>
+              <c>Snapchat</c>
+              <c>Snapchat</c>
+              <c>Multiumedia Company</c>
+            </r>
+            <r>
+              <c>Subway</c>
+              <c>Subway</c>
+              <c>Restaurant</c>
+            </r>
+            <r>
+              <c>Mcdonalds</c>
+              <c>McDonald's</c>
+              <c>Restaurant</c>
+            </r>
+            <r>
+              <c>Taco Bell</c>
+              <c>Taco Bell</c>
+              <c>Restaurant</c>
+            </r>
+            <r>
+              <c>Churchs Chicken</c>
+              <c>Church's Chicken</c>
+              <c>Restaurant</c>
+            </r>
+            <r>
+              <c>Popeyes</c>
+              <c>Popeyes</c>
+              <c>Restaurant</c>
+            </r>
+            <r>
+              <c>Sony</c>
+              <c>Sony</c>
+              <c>Restaurant</c>
+            </r>
+            <r>
+              <c>Cnn</c>
+              <c>CNN</c>
+              <c>TV Network</c>
+            </r>
+            <r>
+              <c>Espn</c>
+              <c>ESPN</c>
+              <c>TV Network</c>
+            </r>
+            <r>
+              <c>Nba</c>
+              <c>NBA</c>
+              <c>Sporting</c>
+            </r>
+            <r>
+              <c>Nfl</c>
+              <c>NFL</c>
+              <c>Sporting</c>
+            </r>
+            <r>
+              <c>Youtube</c>
+              <c>YouTube</c>
+              <c>Website</c>
+            </r>
+            <r>
+              <c>Universal</c>
+              <c>Universal</c>
+              <c>Multiumedia Company</c>
+            </r>
+            <r>
+              <c>Don Julio</c>
+              <c>Don Julio</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Patrón</c>
+              <c>Patrón</c>
+              <c>Alcohol</c>
+            </r>
+            <r>
+              <c>Fritolay</c>
+              <c>Frito-Lay</c>
+              <c>Food</c>
+            </r>
+            <r>
+              <c>Honda</c>
+              <c>Honda</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Toyota</c>
+              <c>Toyota</c>
+              <c>Car</c>
+            </r>
+            <r>
+              <c>Lyft</c>
+              <c>Lyft</c>
+              <c>Ride Sharing</c>
+            </r>
+            <r>
+              <c>Learjet</c>
+              <c>Learjet</c>
+              <c>Aircraft Manufacturing</c>
+            </r>
+            <r>
+              <c>Pyrex</c>
+              <c>Pyrex</c>
+              <c>Kitchenware</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Brand   " size="16" source="TextInput:" type="V_String" />
+            <Field name="   Actual Name   " size="34" source="TextInput:" type="V_String" />
+            <Field name="Type" size="26" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1554" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="JSON_ValueString" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Brand   " />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" name="JSON_ValueString" size="1073741823" source="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="JSON_ValueString" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" name="JSON_ValueString" size="1073741823" source="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Brand   " size="16" source="TextInput:" type="V_String" />
+            <Field name="   Actual Name   " size="34" source="TextInput:" type="V_String" />
+            <Field name="Type" size="26" source="TextInput:" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="JSON_ValueString" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Brand   " size="16" source="TextInput:" type="V_String" />
+            <Field name="   Actual Name   " size="34" source="TextInput:" type="V_String" />
+            <Field name="Type" size="26" source="TextInput:" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Brand   " />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2058" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="   Actual Name   " action="Count" rename="Count" />
+            <SummarizeField field="   Actual Name   " action="GroupBy" rename="   Actual Name   " />
+            <SummarizeField field="Type" action="GroupBy" rename="Type" />
+            <SummarizeField field="Artist" action="GroupBy" rename="Artist" />
+            <SummarizeField field="State" action="GroupBy" rename="State" />
+            <SummarizeField field="Gender" action="GroupBy" rename="Gender" />
+            <SummarizeField field="Year" action="GroupBy" rename="Year" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Count" source="Summarize: Count -    Actual Name   " type="Int64" />
+            <Field name="   Actual Name   " size="34" source="Summarize: GroupBy -    Actual Name   " type="V_String" />
+            <Field name="Type" size="26" source="Summarize: GroupBy - Type" type="V_String" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Summarize: GroupBy - Artist" type="V_WString" />
+            <Field name="State" size="254" source="Summarize: GroupBy - State" type="V_String" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Summarize: GroupBy - Gender" type="V_String" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="Summarize: GroupBy - Year" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="   Actual Name   " order="Asc" />
+            <Field field="Type" order="Asc" />
+            <Field field="Artist" order="Asc" />
+            <Field field="State" order="Asc" />
+            <Field field="Gender" order="Asc" />
+            <Field field="Year" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="726" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>JSON_ValueString</Field>
+          <Delimeters value=" " />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+            <Field name="Artist" size="1073741823" source="Formula: IF [JSON_Name]=&quot;name&quot; THEN [JSON_ValueString] ELSE &quot;&quot; ENDIF" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="606" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([JSON_ValueString], &quot;)&quot;, &quot; &quot;)" field="JSON_ValueString" size="1073741823" type="V_WString" />
+            <FormulaField expression="Replace([JSON_ValueString], &quot;]&quot;, &quot; &quot;)" field="JSON_ValueString" size="1073741823" type="V_WString" />
+            <FormulaField expression="Replace([JSON_ValueString], &quot;(&quot;, &quot; &quot;)" field="JSON_ValueString" size="1073741823" type="V_WString" />
+            <FormulaField expression="IF [JSON_Name]=&quot;name&quot; THEN [JSON_ValueString] ELSE &quot;&quot; ENDIF" field="Artist" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>JSON_ValueString = Replace([JSON_ValueString], ")", " ")
+JSON_ValueString = Repl...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;(&quot;, &quot; &quot;)" type="V_WString" />
+            <Field name="Artist" size="1073741823" source="Formula: IF [JSON_Name]=&quot;name&quot; THEN [JSON_ValueString] ELSE &quot;&quot; ENDIF" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1158" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[JSON_Name]="name" and Isnull([JSON_ValueString]) or IsEmpty([JSON_ValueString])  ]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[JSON_Name]="name" and Isnull([JSON_ValueString]) or IsEmpty([JSON_ValueString])...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="822" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>Artist</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="1038" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>JSON_ValueString</Field>
+          <Delimeters value=" " />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="582" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>JSON_Name</UpdateField_Name>
+          <CreateField_Name>State</CreateField_Name>
+          <CreateField_Type>V_String</CreateField_Type>
+          <CreateField_Size>40</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>if [JSON_ValueString]="West" or [JSON_ValueString]="North" or [JSON_ValueString]="South" or [JSON_ValueString]="New" then [JSON_ValueString]+" "+[Row+1:JSON_ValueString] else "" endif</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>if [JSON_ValueString]="West" or [JSON_ValueString]="North" or...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]=&quot;West&quot; or [JSON_ValueString]=&quot;North&quot; or [JSON_ValueString]=&quot;South&quot; or [JSON_ValueString]=&quot;New&quot; then [JSON_ValueString]+&quot; &quot;+[Row+1:JSON_ValueString] else &quot;&quot; endif" name="State" size="40" source="Formula: if [JSON_ValueString]=&quot;West&quot; or [JSON_ValueString]=&quot;North&quot; or [JSON_ValueString]=&quot;South&quot; or [JSON_ValueString]=&quot;New&quot; then [JSON_ValueString]+&quot; &quot;+[Row+1:JSON_ValueString] else &quot;&quot; endif" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="294" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="486" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&lt;</Operator>
+            <Field>RecordID</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-01-31 15:38:33</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>250</Operand>
+              <StartDate>2021-01-31 15:38:33</StartDate>
+              <EndDate>2021-01-31 15:38:33</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[RecordID] &lt; 250</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1026" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RecordID" selected="False" />
+            <SelectField field="Right_State" selected="True" rename="State" />
+            <SelectField field="JSON_Name" selected="False" />
+            <SelectField field="JSON_ValueString" selected="False" />
+            <SelectField field="Artist" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="State" size="254" source="File: C:\Users\carro\OneDrive\Desktop\States.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1098" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Last</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Last 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="State" size="254" source="File: C:\Users\carro\OneDrive\Desktop\States.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1710" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Allow</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_RecordID" selected="True" rename="Source_RecordID" input="Source_" />
+                <SelectField field="Source_JSON_Name" selected="True" rename="Source_JSON_Name" input="Source_" />
+                <SelectField field="Source_JSON_ValueString" selected="True" rename="Source_JSON_ValueString" input="Source_" />
+                <SelectField field="Source_Artist" selected="True" rename="Source_Artist" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" name="JSON_ValueString" size="1073741823" source="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Brand   " size="16" source="TextInput:" type="V_String" />
+            <Field name="   Actual Name   " size="34" source="TextInput:" type="V_String" />
+            <Field name="Type" size="26" source="TextInput:" type="V_String" />
+            <Field name="State" size="254" source="Formula: Replace([State], &quot;Miami&quot;, &quot;Florida&quot;)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1278" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>JSON_Name</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-01-31 15:50:13</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>DescriptionPlain</Operand>
+              <StartDate>2021-01-31 15:50:13</StartDate>
+              <EndDate>2021-01-31 15:50:13</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[JSON_Name] != "DescriptionPlain"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1194" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([State], &quot;Chicago&quot;, &quot;Illinois&quot;)" field="State" size="254" type="V_String" />
+            <FormulaField expression="Replace([State], &quot;Atlanta&quot;, &quot;Georgia&quot;)" field="State" size="254" type="V_String" />
+            <FormulaField expression="Replace([State], &quot;Brooklyn&quot;, &quot;New York&quot;)&#xA;" field="State" size="254" type="V_String" />
+            <FormulaField expression="Replace([State], &quot;Miami&quot;, &quot;Florida&quot;)" field="State" size="254" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>State = Replace([State], "Chicago", "Illinois")
+State = Replace([State], "Atlant...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="State" size="254" source="Formula: Replace([State], &quot;Miami&quot;, &quot;Florida&quot;)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="678" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\carro\OneDrive\Desktop\States.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>States.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="State" size="254" source="File: C:\Users\carro\OneDrive\Desktop\States.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="834" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="JSON_ValueString" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="State" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_JSON_Name" selected="False" input="Left_" />
+                <SelectField field="Left_JSON_ValueString" selected="False" input="Left_" />
+                <SelectField field="Left_Artist" selected="False" input="Left_" />
+                <SelectField field="Left_State" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: IF !IsEmpty([State]) THEN [State] ELSE [JSON_ValueString] ENDIF" type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="JSON_ValueString" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="State" size="254" source="File: C:\Users\carro\OneDrive\Desktop\States.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="State" size="254" source="File: C:\Users\carro\OneDrive\Desktop\States.csv" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="State" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>State</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-02-08 16:20:34</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2021-02-08 16:20:34</StartDate>
+              <EndDate>2021-02-08 16:20:34</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([State])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="State" size="254" source="Formula: Replace([State], &quot;Miami&quot;, &quot;Florida&quot;)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="State" size="254" source="Formula: Replace([State], &quot;Miami&quot;, &quot;Florida&quot;)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="918" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>State</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-02-08 16:20:09</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2021-02-08 16:20:09</StartDate>
+              <EndDate>2021-02-08 16:20:09</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([State])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="State" size="254" source="File: C:\Users\carro\OneDrive\Desktop\States.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="State" size="254" source="File: C:\Users\carro\OneDrive\Desktop\States.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1482" y="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RecordID" selected="False" />
+            <SelectField field="JSON_Name" selected="False" />
+            <SelectField field="JSON_ValueString" selected="False" />
+            <SelectField field="Artist" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="State" size="254" source="Formula: Replace([State], &quot;Miami&quot;, &quot;Florida&quot;)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="678" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF !IsEmpty([State]) THEN [State] ELSE [JSON_ValueString] ENDIF" field="JSON_ValueString" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>JSON_ValueString = IF !IsEmpty([State]) THEN [State] ELSE [JSON_ValueString] END...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: IF !IsEmpty([State]) THEN [State] ELSE [JSON_ValueString] ENDIF" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]=&quot;West&quot; or [JSON_ValueString]=&quot;North&quot; or [JSON_ValueString]=&quot;South&quot; or [JSON_ValueString]=&quot;New&quot; then [JSON_ValueString]+&quot; &quot;+[Row+1:JSON_ValueString] else &quot;&quot; endif" name="State" size="40" source="Formula: if [JSON_ValueString]=&quot;West&quot; or [JSON_ValueString]=&quot;North&quot; or [JSON_ValueString]=&quot;South&quot; or [JSON_ValueString]=&quot;New&quot; then [JSON_ValueString]+&quot; &quot;+[Row+1:JSON_ValueString] else &quot;&quot; endif" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="582" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>Gender</CreateField_Name>
+          <CreateField_Type>V_String</CreateField_Type>
+          <CreateField_Size>8</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>if [JSON_ValueString]= "His" or [JSON_ValueString] = "He" then "Male" else "" endif</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>if [JSON_ValueString]= "His" or [JSON_ValueString] = "He" the...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]= &quot;His&quot; or [JSON_ValueString] = &quot;He&quot; then &quot;Male&quot; else &quot;&quot; endif" name="Gender" size="8" source="Formula: if [JSON_ValueString]= &quot;His&quot; or [JSON_ValueString] = &quot;He&quot; then &quot;Male&quot; else &quot;&quot; endif" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="714" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>Gender</UpdateField_Name>
+          <CreateField_Name>Gender</CreateField_Name>
+          <CreateField_Type>V_String</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>if [JSON_ValueString] = "Her" or [JSON_ValueString] = "She" then "Female" else [gender] endif</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>if [JSON_ValueString] = "Her" or [JSON_ValueString] = "She" t...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Her&quot; or [JSON_ValueString] = &quot;She&quot; then &quot;Female&quot; else [gender] endif" name="Gender" size="8" source="Formula: if [JSON_ValueString] = &quot;Her&quot; or [JSON_ValueString] = &quot;She&quot; then &quot;Female&quot; else [gender] endif" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="954" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>Gender</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-02-10 11:01:11</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2021-02-10 11:01:11</StartDate>
+              <EndDate>2021-02-10 11:01:11</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([Gender])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1038" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1134" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RecordID" selected="False" />
+            <SelectField field="JSON_Name" selected="False" />
+            <SelectField field="JSON_ValueString" selected="False" />
+            <SelectField field="Artist" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1962" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" name="JSON_ValueString" size="1073741823" source="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Brand   " size="16" source="TextInput:" type="V_String" />
+            <Field name="   Actual Name   " size="34" source="TextInput:" type="V_String" />
+            <Field name="Type" size="26" source="TextInput:" type="V_String" />
+            <Field name="State" size="254" source="Formula: Replace([State], &quot;Miami&quot;, &quot;Florida&quot;)" type="V_String" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2442" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\carro\OneDrive\Desktop\Finished CSV\.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="True" />
+          <MultiFileType>Suffix</MultiFileType>
+          <MultiFileField>Artist</MultiFileField>
+          <KeepField value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="510" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>Contains([JSON_Name],"release_date_for")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Contains([JSON_Name],"release_date_for")</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueInt" source="JSONParse: " type="Int64" />
+            <Field name="JSON_ValueFloat" source="JSONParse: " type="Double" />
+            <Field name="JSON_ValueBool" source="JSONParse: " type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueInt" source="JSONParse: " type="Int64" />
+            <Field name="JSON_ValueFloat" source="JSONParse: " type="Double" />
+            <Field name="JSON_ValueBool" source="JSONParse: " type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="606" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>JSON_Name</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>
+          </RootName>
+          <Delimeters value="_" />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueInt" source="JSONParse: " type="Int64" />
+            <Field name="JSON_ValueFloat" source="JSONParse: " type="Double" />
+            <Field name="JSON_ValueBool" source="JSONParse: " type="Bool" />
+            <Field description="TextToColumns: Parsed from JSON_Name" name="1" size="1073741823" source="TextToColumns: Parsed from JSON_Name" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_Name" name="2" size="1073741823" source="TextToColumns: Parsed from JSON_Name" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="738" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>JSON_ValueString</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>JSON_ValueString</RootName>
+          <Delimeters value="," />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="JSON_ValueInt" source="JSONParse: " type="Int64" />
+            <Field name="JSON_ValueFloat" source="JSONParse: " type="Double" />
+            <Field name="JSON_ValueBool" source="JSONParse: " type="Bool" />
+            <Field description="TextToColumns: Parsed from JSON_Name" name="1" size="1073741823" source="TextToColumns: Parsed from JSON_Name" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_Name" name="2" size="1073741823" source="TextToColumns: Parsed from JSON_Name" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString1" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString2" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="76">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="822" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="JSON_Name" selected="False" />
+            <SelectField field="JSON_ValueString" selected="False" />
+            <SelectField field="JSON_ValueInt" selected="False" />
+            <SelectField field="JSON_ValueFloat" selected="False" />
+            <SelectField field="JSON_ValueBool" selected="False" />
+            <SelectField field="2" selected="False" />
+            <SelectField field="JSON_ValueString1" selected="False" />
+            <SelectField field="JSON_ValueString2" selected="True" rename="Year" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from JSON_Name" name="1" size="1073741823" source="TextToColumns: Parsed from JSON_Name" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="TextToColumns: Parsed from JSON_ValueString" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1014" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([1], &quot;Release&quot;, &quot;Lyrics&quot;)" field="1" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[1 = Replace([1], "Release", "Lyrics")
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from JSON_Name" name="1" size="1073741823" source="Formula: Replace([1], &quot;Release&quot;, &quot;Lyrics&quot;)" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings>
+        <Position x="918" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"1","Year"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">True</Value>
+          <Value name="Check Box (77)">True</Value>
+          <Value name="Drop Down (81)">title</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output26">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from JSON_Name" name="1" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1830" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="JSON_Name" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="1" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_1" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" name="JSON_ValueString" size="1073741823" source="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Brand   " size="16" source="TextInput:" type="V_String" />
+            <Field name="   Actual Name   " size="34" source="TextInput:" type="V_String" />
+            <Field name="Type" size="26" source="TextInput:" type="V_String" />
+            <Field name="State" size="254" source="Formula: Replace([State], &quot;Miami&quot;, &quot;Florida&quot;)" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="JSON_Name" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" name="JSON_ValueString" size="1073741823" source="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Brand   " size="16" source="TextInput:" type="V_String" />
+            <Field name="   Actual Name   " size="34" source="TextInput:" type="V_String" />
+            <Field name="Type" size="26" source="TextInput:" type="V_String" />
+            <Field name="State" size="254" source="Formula: Replace([State], &quot;Miami&quot;, &quot;Florida&quot;)" type="V_String" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="JSON_Name" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from JSON_Name" name="1" size="1073741823" source="Formula: Replace([1], &quot;Release&quot;, &quot;Lyrics&quot;)" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="1" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="822" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>Gender</UpdateField_Name>
+          <CreateField_Name>Gender</CreateField_Name>
+          <CreateField_Type>V_String</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>if [JSON_ValueString] = "Them" then "Group" else [gender] endif</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>if [JSON_ValueString] = "Them" then "Group" else [gender] endif</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="87">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="390" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" field="JSON_ValueString" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[JSON_ValueString = Replace([JSON_ValueString], "based", "")
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="JSON_ValueString" size="1073741823" source="Formula: Replace([JSON_ValueString], &quot;based&quot;, &quot;&quot;)" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2142" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;Pop&quot;" field="Genre" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Genre = "Pop"
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Count" source="Summarize: Count -    Actual Name   " type="Int64" />
+            <Field name="   Actual Name   " size="34" source="Summarize: GroupBy -    Actual Name   " type="V_String" />
+            <Field name="Type" size="26" source="Summarize: GroupBy - Type" type="V_String" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Summarize: GroupBy - Artist" type="V_WString" />
+            <Field name="State" size="254" source="Summarize: GroupBy - State" type="V_String" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Summarize: GroupBy - Gender" type="V_String" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="Summarize: GroupBy - Year" type="V_WString" />
+            <Field name="Genre" size="1073741823" source="Formula: &quot;Pop&quot;" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="   Actual Name   " order="Asc" />
+            <Field field="Type" order="Asc" />
+            <Field field="Artist" order="Asc" />
+            <Field field="State" order="Asc" />
+            <Field field="Gender" order="Asc" />
+            <Field field="Year" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="97">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1806" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\carro\AppData\Local\Temp\Engine_10460_6f820ef44a5a490383d9e54216a1cc3a_\Engine_1540_99a4f66f72534066885d50930656843b_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="102">
+      <GuiSettings>
+        <Position x="1422" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Input.Input15"><![CDATA[JSON_Name=JSON_Name
+JSON_ValueString=JSON_ValueString
+Artist=Artist
+]]></Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>2 Word Brands (101)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output16">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" name="JSON_ValueString" size="1073741823" source="Formula: if [JSON_ValueString]=&quot;Chicken&quot; and [Row-1:JSON_ValueString]=&quot;Churchs&quot; then &quot;Churchs Chicken&quot; else [JSON_ValueString] endif" type="V_WString" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="2 Word Brands.yxmc" />
+    </Node>
+    <Node ToolID="103">
+      <GuiSettings>
+        <Position x="2238" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Count","   Actual Name   ","Type","Artist","State","Gender","Year","Genre"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output26">
+          <RecordInfo>
+            <Field name="Count" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="   Actual Name   " size="34" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field name="Type" size="26" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="State" size="254" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Genre" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="104">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2334" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="   Actual Name   " selected="True" rename="Brand" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Count" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Brand" size="34" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field name="Type" size="26" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="Formula: IF isEmpty([Artist]) then [Row-1:Artist] else [artist] endif" name="Artist" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="State" size="254" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="Formula: if [JSON_ValueString] = &quot;Them&quot; then &quot;Group&quot; else [gender] endif" name="Gender" size="8" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from JSON_ValueString" name="Year" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Genre" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="False" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output26" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="102" Connection="Output16" />
+      <Destination ToolID="22" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Join" />
+      <Destination ToolID="44" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="44" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="False" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="20" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="True" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="True" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="79" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Output" />
+      <Destination ToolID="79" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="97" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="45" Connection="False" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="True" />
+      <Destination ToolID="102" Connection="Input15" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="48" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="48" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Join" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="True" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="True" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="81" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="True" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Output" />
+      <Destination ToolID="66" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Join" />
+      <Destination ToolID="66" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="True" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="78" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Output26" />
+      <Destination ToolID="77" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="103" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="Output26" />
+      <Destination ToolID="104" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="104" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>JSON Parse workflow MACRO</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (30)</Name>
+          <ToolId value="30" />
+          <Questions />
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="0" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="20" Selected="True" />
+        <Tool ToolId="71" Selected="True" />
+        <Tool ToolId="78" Selected="True" />
+        <Tool ToolId="97" Selected="False" />
+        <Tool ToolId="102" Selected="True" />
+        <Tool ToolId="103" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
