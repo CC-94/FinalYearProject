@@ -1,0 +1,11 @@
+AlteryxFiles - Contains the files for the Alteryx workflow. It is displayed as XML code on GitHub
+
+GeniusAPIPythonScript - This is a handful of Python scripts which I used to connect to the Genuis API. I reused this code to download all artists in the project (over 200).
+
+JSONFileSample - A sample of the JSON files which are downloaded from the Genius API
+
+LyricGenerator - Python notebook which allows lyrics to be generated. I reused this script to generate lyrics for all 3 genres, all that changed was the input sheet and the EPOCH number.
+
+RWebScrape - Some of the R code used to web scrape the list of brands from various sources.
+
+StatisticalTest - The R code which I used to analyse my dataset. Data was pre-processed in Alteryx
